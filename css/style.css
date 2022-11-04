@@ -141,12 +141,103 @@ a {
   text-decoration: none;
 }
 
+.icon-whatsapp {
+  width: 60px;
+  z-index: 500;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #25d366;
+  -webkit-animation: animation-icon 2s linear infinite;
+          animation: animation-icon 2s linear infinite;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: fixed;
+  bottom: 125px;
+  left: 20px;
+}
+.icon-whatsapp i {
+  color: #fff;
+  font-size: 45px;
+}
+.icon-whatsapp .title-msg {
+  color: #07a57e;
+  display: none;
+  position: absolute;
+  bottom: -52px;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: rgba(2, 29, 56, 0.9);
+  transition: 0.5s ease-in-out;
+}
+.icon-whatsapp .title-msg p {
+  margin-top: 6px;
+  text-align: center;
+}
+.icon-whatsapp .title-msg::after {
+  content: "";
+  display: block;
+  border-width: 12px;
+  border-color: transparent transparent rgba(2, 29, 56, 0.9) transparent;
+  border-style: solid;
+  position: absolute;
+  top: -24px;
+  left: 28px;
+}
+.icon-whatsapp:hover {
+  -webkit-animation: stop 1s linear infinite;
+          animation: stop 1s linear infinite;
+}
+.icon-whatsapp:hover .title-msg {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .icon-whatsapp {
+    left: 15px;
+  }
+}
+@-webkit-keyframes stop {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes stop {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animation-icon {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation-icon {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .icon-angle {
   background-color: #021d38;
   width: 40px;
   height: 40px;
   position: fixed;
-  left: 15px;
+  left: 30px;
   border-radius: 6px;
   bottom: 25px;
   z-index: 1000000000;
@@ -159,6 +250,11 @@ a {
   color: #07a57e;
 }
 
+@media (max-width: 991px) {
+  .icon-angle {
+    left: 25px;
+  }
+}
 .fixed-nav {
   background-color: #021d38;
   position: fixed;

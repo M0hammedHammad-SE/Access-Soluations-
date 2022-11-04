@@ -118,6 +118,8 @@ body {
     }
 }
 
+
+
 // *********************
 h1,
 h2,
@@ -144,12 +146,109 @@ a {
     text-decoration: none;
 }
 
+// whatsapp icon 
+.icon-whatsapp {
+    width: 60px;
+    z-index: 500;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #25d366;
+    animation: animation-icon 2s linear infinite;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+    bottom: 125px;
+    left: 20px;
+    i {
+        color: #fff;
+        font-size: 45px;
+    }
+
+    
+
+    // position: relative;
+
+
+    .title-msg {
+        
+        color: #07a57e;
+        display: none;
+        position: absolute;
+        bottom: -52px;
+        height: 40px;
+        width: 80px;
+        border-radius: 5px;
+        background-color: rgba(2, 29, 56,0.9);
+        transition: 0.5s ease-in-out;
+        p{
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            border-width: 12px;
+            border-color: transparent transparent rgba(2, 29, 56,0.9) transparent;
+            border-style: solid;
+            position: absolute;
+            top: -24px;
+            left: 28px;
+        }
+    }
+    &:hover {
+        animation: stop 1s linear infinite;
+        .title-msg{
+            display: block;
+        }
+    }
+
+}
+@media (max-width:991px) 
+{
+    .icon-whatsapp{
+        left: 15px;
+    }  
+}
+
+
+@keyframes stop {
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes animation-icon {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+// 
+
 .icon-angle {
     background-color: #021d38;
     width: 40px;
     height: 40px;
     position: fixed;
-    left: 15px;
+    left: 30px;
     border-radius: 6px;
     bottom: 25px;
     z-index: 1000000000;
@@ -162,6 +261,12 @@ a {
         color: #07a57e;
 
     }
+}
+@media (max-width:991px) 
+{
+    .icon-angle{
+        left: 25px;
+    }  
 }
 
 .fixed-nav {
@@ -338,10 +443,11 @@ a {
                 font-size: 40px;
                 color: #07a57e;
             }
-            p{
+
+            p {
                 text-align: center !important;
             }
-            
+
         }
 
 
